@@ -49,4 +49,5 @@ function newRecipe(req, res){
 module.exports = {
 	getItems : getItems, 
 	newItem : newItem, 
+	newRecipe : newRecipe, 
 }

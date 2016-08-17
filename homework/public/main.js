@@ -12,7 +12,6 @@ angular.module('app')
 			})
 
 		s.item = {}
-
 		s.subIng = function(){
 			console.log('ingredient submission fired', s.item)
 			$http.post('/api/newItem', s.item)
@@ -24,6 +23,17 @@ angular.module('app')
 							s.itemArray = serverData.data
 							s.item = {}
 						})
+				})
+		}
+
+		s.rec = {}
+		s.subRec = function(){
+			console.log('recipe submission fired', s.rec)
+			$http.post('/api/newRecipe', s.rec)
+				.then(function(serverData){
+					console.log('saved recipe', serverData.data)
+					alert('Your recipe has been saved!!')
+					s.rec = {}
 				})
 		}
 
