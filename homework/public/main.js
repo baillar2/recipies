@@ -50,3 +50,15 @@ angular.module('app')
 		}
 
 	}])
+angular.module('app')
+	.controller('controllerTwo', ['$scope', '$http', function($scope, $http){
+
+
+
+	}])
+angular.module('app')
+	.controller('controllerThree', ['$scope', '$http', function($scope, $http){
+
+
+
+	}])

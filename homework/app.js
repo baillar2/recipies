@@ -35,6 +35,14 @@ app.post('/api/newRecipe', function(req, res){
 	console.log('recipe submission fired', req.body)
 	controller.newRecipe(req, res)
 })
+
+app.get('/recipes', function(req, res){
+	res.sendFile('/recipe.html', {root: './public'})
+})
+
+app.get('/ingredients', function(req, res){
+	res.sendFile('/ingredient.html', {root: './public'})
+})
 //listen\\
 var port = 3000
 app.listen(port, function(){
