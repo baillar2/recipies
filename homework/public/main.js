@@ -26,14 +26,26 @@ angular.module('app')
 				})
 		}
 
-		s.rec = {}
+		s.rec = {
+			name : null, 
+			description : null, 
+			ingredients : []
+		}
 		s.subRec = function(){
 			console.log('recipe submission fired', s.rec)
+			angular.forEach(s.itemArray, function(item){
+				if(!!item.selected) s.rec.ingredients.push(item.name)
+				})
+			console.log('checked items', s.checkedArray)
 			$http.post('/api/newRecipe', s.rec)
 				.then(function(serverData){
 					console.log('saved recipe', serverData.data)
 					alert('Your recipe has been saved!!')
-					s.rec = {}
+					s.rec = {
+						name : null, 
+						description : null, 
+						ingredients : []
+					}
 				})
 		}
 

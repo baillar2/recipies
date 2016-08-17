@@ -45,8 +45,8 @@
 				<input type="text" class="form-control" placeholder="description" ng-model="rec.desciption">
 			</div>
 			<div class="form-group">
-				<div ng-repeat="item in itemArray">
-				<p>{{item.name}}</p><input type="checkbox" value="item._id">
+				<div class="checkbox" ng-repeat="item in itemArray">
+					<label><input ng-model="item.selected" type="checkbox" value="item.name">{{item.name}}</label>
 				</div>
 			</div>
 			
