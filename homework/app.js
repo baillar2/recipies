@@ -13,7 +13,7 @@ mongoose.connect('mongodb://localhost/pairinDB')
 app.use(logger('dev'))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: true }))
-app.use(expres.static(__dirname + '/public'))
+app.use(express.static(__dirname + '/public'))
 
 //routes\\
 
