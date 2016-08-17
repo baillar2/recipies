@@ -30,6 +30,22 @@ function newItem(item, res){
 	})
 }
 
+function newRecipe(req, res){
+	var recipe = new recModel({
+		name : req.body.name, 
+		description : req.body.description, 
+		ingredients : req.body.ingredients, 
+	})
+	recipe.save(function(err, recipe){
+		if(err){
+			console.log('save error', err)
+		}
+		else{
+			console.log('recipe saved', recipe)
+			res.json(recipe)
+		}
+	})
+}
 module.exports = {
 	getItems : getItems, 
 	newItem : newItem, 

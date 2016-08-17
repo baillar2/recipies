@@ -30,6 +30,11 @@ app.post('/api/newItem', function(req, res){
 	console.log('ingredient submission fired', req.body)
 	controller.newItem(req, res)
 })
+
+app.post('/api/newRecipe', function(req, res){
+	console.log('recipe submission fired', req.body)
+	controler.newRecipe(req, res)
+})
 //listen\\
 var port = 3000
 app.listen(port, function(){
