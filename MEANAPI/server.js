@@ -26,6 +26,7 @@ app.get('/', function(req, res){
 })
 
 var apiRouter = express.Router()
+
 apiRouter.use(function(req, res, next){
 	console.log('somebody just came to our api')
 	next()
@@ -33,6 +34,7 @@ apiRouter.use(function(req, res, next){
 apiRouter.get('/', function(req, res){
 	res.json({message:'hooray! welcome to our api'})
 })
+app.use('/api', apiRouter)
 apiRouter.route('/users')
 	.post(function(req, res){
 		var user = new User()
@@ -44,14 +46,21 @@ apiRouter.route('/users')
 		user.save(function(err){
 			if(err){
 				if(err.code == 11000)
-					return res.json({success: false, message: 'A user with that username alreasdy exists'})
+					return res.json({success:false, message: 'a user with that name already exists'})
 				else
-					return res.send(err)
+					return res.json(err)
 			}
-			res.json({message : 'user created!'})
+			res.json({message:'user created'})
 		})
 	})
-app.use('/api', apiRouter)
+	.get(function(req, res){
+		User.find(function(err, users){
+			res.json({messge:'user get route'})
+			//if(err) res.send(err)
+			//res.json({message:'users'})
+		})
+	})
+
 
 app.listen(port)
 console.log('server listening on port ' + port)
