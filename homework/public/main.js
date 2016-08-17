@@ -52,8 +52,29 @@ angular.module('app')
 	}])
 angular.module('app')
 	.controller('controllerTwo', ['$scope', '$http', function($scope, $http){
+		var s = $scope
 
-
+		s.search = {}
+		s.findName = function(){
+			console.log("find by name fired")
+			$http.post('/api/ingredient/name', s.search)
+				.then(function(serverData){
+					console.log('search results', serverData.data)
+					s.item = serverData.data
+					s.found = true
+					console.log(s.found)
+				})
+		}
+		s.editIng = function(){
+			s.edit = true
+			console.log('edit ingredient fired')
+			$http.post('/api/ingredient/edit', s.item)
+				.then(function(serverData){
+					console.log('edit success', serverData.data)
+					alert('Your ingredient has been edited')
+					s.edit = false
+				})	
+		}
 
 	}])
 angular.module('app')

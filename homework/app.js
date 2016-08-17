@@ -43,6 +43,11 @@ app.get('/recipes', function(req, res){
 app.get('/ingredients', function(req, res){
 	res.sendFile('/ingredient.html', {root: './public'})
 })
+
+app.post('/api/ingredient/name', function(req, res){
+	console.log('ingredient search fired', req.body)
+	controller.findItem(req, res)
+})
 //listen\\
 var port = 3000
 app.listen(port, function(){

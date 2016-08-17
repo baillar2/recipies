@@ -46,8 +46,27 @@ function newRecipe(req, res){
 		}
 	})
 }
+
+function findItem(req, res){
+
+	itemModel.findOne({name : req.body.name}, function(err, item){
+		if(err){
+			console.log('seach error', err)
+		}
+		else{
+			console.log('found item', item)
+			res.json(item)
+		}
+	})
+}
+
+function editIng(req, res){
+	itemModel
+}
 module.exports = {
 	getItems : getItems, 
 	newItem : newItem, 
 	newRecipe : newRecipe, 
+	findItem : findItem, 
 }
+

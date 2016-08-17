@@ -12,9 +12,47 @@
 	</div>
 	<div>
 		<h2>Search by Name</h2>
+		<form class="form-inline">
+			<div class="form-group">
+				<label>Ingredient Name</label>
+				<input type="text" class="form-control" placeholder="Item you're looking for" ng-model="search.name">
+			</div>
+			<input type="submit" class="btn btn-primary" ng-click="findName()">
+		</form>
+		<div ng-show="found">
+			<label>Name</label><span>{{item.name}}</span>
+			<label>Description</label><span>{{item.description}}</span>
+			<label>Food Group</label><span>{{item.group}}</span>
+			<button class="btn btn-primary" ng-model="s.edit">Edit Ingredient</button>
+		</div>
+		<div ng-show="s.edit">
+			<form class="form-inline">
+			<div class="form-group">
+				<label>Name</label>
+				<input type="text" class="form-control" placeholder="item.name" ng-model="item.name">
+			</div>
+			<div class="form-group">
+				<label>Description</label>
+				<input type="text" class="form-control" placeholder="{{item.description}}" ng-model="item.description">
+			</div>
+			<div class="form-group">
+				<label>Group</label>
+				<select ng-model="item.group">
+					<option value="protien">Protien</option>
+					<option value="fruit">Fruit</option>
+					<option value="vegetable">Vegetable</option>
+					<option value="grain">Grain</option>
+				</select>
+			</div>
+			<input type="submit" ng-click="editIng()" class="btn btn-primary">
+		</form>
+		</div>
 	</div>
 	<div>
 		<h2>Search by Food Group</h2>
+	</div>
+	<div class="footer">
+		<a class="btn btn-primary" href="/">Home</a>
 	</div>
 </body>	
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.js"></script>
