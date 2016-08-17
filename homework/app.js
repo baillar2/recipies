@@ -25,6 +25,11 @@ app.get('/api/getItems', function(req, res){
 	console.log('getting ingredient list')
 	controller.getItems(req, res)
 })
+
+app.post('/api/newItem', function(req, res){
+	console.log('ingredient submission fired', req.body)
+	controller.newItem(req, res)
+})
 //listen\\
 var port = 3000
 app.listen(port, function(){
