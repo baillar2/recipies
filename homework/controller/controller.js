@@ -29,3 +29,8 @@ function newItem(item, res){
 		}
 	})
 }
+
+module.exports = {
+	getItems : getItems, 
+	newItem : newItem, 
+}
