@@ -1,0 +1,210 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'express',
+1 verbose cli   'morgan',
+1 verbose cli   'mongoose',
+1 verbose cli   'body-parcer',
+1 verbose cli   '--save' ]
+2 info using npm@3.8.2
+3 info using node@v4.1.0
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly fetchPackageMetaData express
+8 silly fetchPackageMetaData morgan
+9 silly fetchPackageMetaData mongoose
+10 silly fetchPackageMetaData body-parcer
+11 silly fetchNamedPackageData express
+12 silly mapToRegistry name express
+13 silly mapToRegistry using default registry
+14 silly mapToRegistry registry https://registry.npmjs.org/
+15 silly mapToRegistry uri https://registry.npmjs.org/express
+16 silly fetchNamedPackageData morgan
+17 silly mapToRegistry name morgan
+18 silly mapToRegistry using default registry
+19 silly mapToRegistry registry https://registry.npmjs.org/
+20 silly mapToRegistry uri https://registry.npmjs.org/morgan
+21 silly fetchNamedPackageData mongoose
+22 silly mapToRegistry name mongoose
+23 silly mapToRegistry using default registry
+24 silly mapToRegistry registry https://registry.npmjs.org/
+25 silly mapToRegistry uri https://registry.npmjs.org/mongoose
+26 silly fetchNamedPackageData body-parcer
+27 silly mapToRegistry name body-parcer
+28 silly mapToRegistry using default registry
+29 silly mapToRegistry registry https://registry.npmjs.org/
+30 silly mapToRegistry uri https://registry.npmjs.org/body-parcer
+31 verbose request uri https://registry.npmjs.org/body-parcer
+32 verbose request no auth needed
+33 info attempt registry request try #1 at 9:57:37 PM
+34 verbose request id fa60dc55348e2682
+35 http request GET https://registry.npmjs.org/body-parcer
+36 verbose request uri https://registry.npmjs.org/morgan
+37 verbose request no auth needed
+38 info attempt registry request try #1 at 9:57:37 PM
+39 verbose etag "706IQ9SLPKZ57Z1AOFAP7R1WV"
+40 http request GET https://registry.npmjs.org/morgan
+41 verbose request uri https://registry.npmjs.org/express
+42 verbose request no auth needed
+43 info attempt registry request try #1 at 9:57:37 PM
+44 verbose etag "2U0HZYKWPE3Q0XO8UOWBNP436"
+45 http request GET https://registry.npmjs.org/express
+46 verbose request uri https://registry.npmjs.org/mongoose
+47 verbose request no auth needed
+48 info attempt registry request try #1 at 9:57:37 PM
+49 verbose etag "F08U5AT4685J7JMC5CORZ7SMA"
+50 http request GET https://registry.npmjs.org/mongoose
+51 http 304 https://registry.npmjs.org/morgan
+52 verbose headers { date: 'Wed, 17 Aug 2016 03:57:37 GMT',
+52 verbose headers   via: '1.1 varnish',
+52 verbose headers   'cache-control': 'max-age=300',
+52 verbose headers   etag: '"706IQ9SLPKZ57Z1AOFAP7R1WV"',
+52 verbose headers   age: '260',
+52 verbose headers   connection: 'keep-alive',
+52 verbose headers   'x-served-by': 'cache-den6023-DEN',
+52 verbose headers   'x-cache': 'HIT',
+52 verbose headers   'x-cache-hits': '3',
+52 verbose headers   'x-timer': 'S1471406257.998563,VS0,VE0',
+52 verbose headers   vary: 'Accept-Encoding' }
+53 silly get cb [ 304,
+53 silly get   { date: 'Wed, 17 Aug 2016 03:57:37 GMT',
+53 silly get     via: '1.1 varnish',
+53 silly get     'cache-control': 'max-age=300',
+53 silly get     etag: '"706IQ9SLPKZ57Z1AOFAP7R1WV"',
+53 silly get     age: '260',
+53 silly get     connection: 'keep-alive',
+53 silly get     'x-served-by': 'cache-den6023-DEN',
+53 silly get     'x-cache': 'HIT',
+53 silly get     'x-cache-hits': '3',
+53 silly get     'x-timer': 'S1471406257.998563,VS0,VE0',
+53 silly get     vary: 'Accept-Encoding' } ]
+54 verbose etag https://registry.npmjs.org/morgan from cache
+55 verbose get saving morgan to /Users/baillar2/.npm/registry.npmjs.org/morgan/.cache.json
+56 verbose correctMkdir /Users/baillar2/.npm correctMkdir not in flight; initializing
+57 http 304 https://registry.npmjs.org/mongoose
+58 verbose headers { date: 'Wed, 17 Aug 2016 03:57:37 GMT',
+58 verbose headers   via: '1.1 varnish',
+58 verbose headers   'cache-control': 'max-age=300',
+58 verbose headers   etag: '"F08U5AT4685J7JMC5CORZ7SMA"',
+58 verbose headers   age: '83',
+58 verbose headers   connection: 'keep-alive',
+58 verbose headers   'x-served-by': 'cache-den6022-DEN',
+58 verbose headers   'x-cache': 'HIT',
+58 verbose headers   'x-cache-hits': '3',
+58 verbose headers   'x-timer': 'S1471406257.999751,VS0,VE0',
+58 verbose headers   vary: 'Accept-Encoding' }
+59 silly get cb [ 304,
+59 silly get   { date: 'Wed, 17 Aug 2016 03:57:37 GMT',
+59 silly get     via: '1.1 varnish',
+59 silly get     'cache-control': 'max-age=300',
+59 silly get     etag: '"F08U5AT4685J7JMC5CORZ7SMA"',
+59 silly get     age: '83',
+59 silly get     connection: 'keep-alive',
+59 silly get     'x-served-by': 'cache-den6022-DEN',
+59 silly get     'x-cache': 'HIT',
+59 silly get     'x-cache-hits': '3',
+59 silly get     'x-timer': 'S1471406257.999751,VS0,VE0',
+59 silly get     vary: 'Accept-Encoding' } ]
+60 verbose etag https://registry.npmjs.org/mongoose from cache
+61 verbose get saving mongoose to /Users/baillar2/.npm/registry.npmjs.org/mongoose/.cache.json
+62 verbose correctMkdir /Users/baillar2/.npm correctMkdir already in flight; waiting
+63 http 304 https://registry.npmjs.org/express
+64 verbose headers { date: 'Wed, 17 Aug 2016 03:57:37 GMT',
+64 verbose headers   via: '1.1 varnish',
+64 verbose headers   'cache-control': 'max-age=300',
+64 verbose headers   etag: '"2U0HZYKWPE3Q0XO8UOWBNP436"',
+64 verbose headers   age: '83',
+64 verbose headers   connection: 'keep-alive',
+64 verbose headers   'x-served-by': 'cache-den6024-DEN',
+64 verbose headers   'x-cache': 'HIT',
+64 verbose headers   'x-cache-hits': '1',
+64 verbose headers   'x-timer': 'S1471406257.999616,VS0,VE0',
+64 verbose headers   vary: 'Accept-Encoding' }
+65 silly get cb [ 304,
+65 silly get   { date: 'Wed, 17 Aug 2016 03:57:37 GMT',
+65 silly get     via: '1.1 varnish',
+65 silly get     'cache-control': 'max-age=300',
+65 silly get     etag: '"2U0HZYKWPE3Q0XO8UOWBNP436"',
+65 silly get     age: '83',
+65 silly get     connection: 'keep-alive',
+65 silly get     'x-served-by': 'cache-den6024-DEN',
+65 silly get     'x-cache': 'HIT',
+65 silly get     'x-cache-hits': '1',
+65 silly get     'x-timer': 'S1471406257.999616,VS0,VE0',
+65 silly get     vary: 'Accept-Encoding' } ]
+66 verbose etag https://registry.npmjs.org/express from cache
+67 verbose get saving express to /Users/baillar2/.npm/registry.npmjs.org/express/.cache.json
+68 verbose correctMkdir /Users/baillar2/.npm correctMkdir already in flight; waiting
+69 http 404 https://registry.npmjs.org/body-parcer
+70 verbose headers { 'content-type': 'application/json',
+70 verbose headers   'cache-control': 'max-age=0',
+70 verbose headers   'content-length': '2',
+70 verbose headers   'accept-ranges': 'bytes',
+70 verbose headers   date: 'Wed, 17 Aug 2016 03:57:38 GMT',
+70 verbose headers   via: '1.1 varnish',
+70 verbose headers   age: '0',
+70 verbose headers   connection: 'keep-alive',
+70 verbose headers   'x-served-by': 'cache-den6027-DEN',
+70 verbose headers   'x-cache': 'MISS',
+70 verbose headers   'x-cache-hits': '0',
+70 verbose headers   'x-timer': 'S1471406258.000486,VS0,VE238',
+70 verbose headers   vary: 'Accept-Encoding' }
+71 silly get cb [ 404,
+71 silly get   { 'content-type': 'application/json',
+71 silly get     'cache-control': 'max-age=0',
+71 silly get     'content-length': '2',
+71 silly get     'accept-ranges': 'bytes',
+71 silly get     date: 'Wed, 17 Aug 2016 03:57:38 GMT',
+71 silly get     via: '1.1 varnish',
+71 silly get     age: '0',
+71 silly get     connection: 'keep-alive',
+71 silly get     'x-served-by': 'cache-den6027-DEN',
+71 silly get     'x-cache': 'MISS',
+71 silly get     'x-cache-hits': '0',
+71 silly get     'x-timer': 'S1471406258.000486,VS0,VE238',
+71 silly get     vary: 'Accept-Encoding' } ]
+72 silly fetchPackageMetaData Error: Registry returned 404 for GET on https://registry.npmjs.org/body-parcer
+72 silly fetchPackageMetaData     at makeError (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:264:12)
+72 silly fetchPackageMetaData     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:242:14)
+72 silly fetchPackageMetaData     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:172:14)
+72 silly fetchPackageMetaData     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:199:22)
+72 silly fetchPackageMetaData     at emitTwo (events.js:87:13)
+72 silly fetchPackageMetaData     at Request.emit (events.js:172:7)
+72 silly fetchPackageMetaData     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1036:10)
+72 silly fetchPackageMetaData     at emitOne (events.js:82:20)
+72 silly fetchPackageMetaData     at Request.emit (events.js:169:7)
+72 silly fetchPackageMetaData     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:963:12)
+72 silly fetchPackageMetaData  error for body-parcer { [Error: Registry returned 404 for GET on https://registry.npmjs.org/body-parcer] pkgid: 'body-parcer', statusCode: 404, code: 'E404' }
+73 silly rollbackFailedOptional Starting
+74 silly rollbackFailedOptional Finishing
+75 silly runTopLevelLifecycles Starting
+76 silly runTopLevelLifecycles Finishing
+77 silly install printInstalled
+78 verbose stack Error: Registry returned 404 for GET on https://registry.npmjs.org/body-parcer
+78 verbose stack     at makeError (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:264:12)
+78 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:242:14)
+78 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:172:14)
+78 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:199:22)
+78 verbose stack     at emitTwo (events.js:87:13)
+78 verbose stack     at Request.emit (events.js:172:7)
+78 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1036:10)
+78 verbose stack     at emitOne (events.js:82:20)
+78 verbose stack     at Request.emit (events.js:169:7)
+78 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:963:12)
+79 verbose statusCode 404
+80 verbose pkgid body-parcer
+81 verbose cwd /Users/baillar2/Projects/homework
+82 error Darwin 14.5.0
+83 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "express" "morgan" "mongoose" "body-parcer" "--save"
+84 error node v4.1.0
+85 error npm  v3.8.2
+86 error code E404
+87 error 404 Registry returned 404 for GET on https://registry.npmjs.org/body-parcer
+88 error 404
+89 error 404 'body-parcer' is not in the npm registry.
+90 error 404 You should bug the author to publish it (or use the name yourself!)
+91 error 404 Note that you can also install from a
+92 error 404 tarball, folder, http url, or git url.
+93 verbose exit [ 1, true ]
