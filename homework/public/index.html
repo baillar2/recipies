@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+	<title>Pairin Homework</title>
+	<link rel="stylesheet" type="text/css" href=https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.css>
+	<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+
+<body ng-controller="controllerOne" class="container">
+	<div class="header">
+		<h1>Pairing Recipe Homework</h1>
+	</div>
+	<div>
+		<h2>Create Ingredient</h2>
+		<form class="form-inline">
+			<div class="form-group">
+				<label>Name</label>
+				<input type="text" class="form-control" placeholder="name" ng-model="item.name">
+			</div>
+			<div class="form-group">
+				<label>Description</label>
+				<input type="text" class="form-control" placeholder="description" ng-model="item.desciption">
+			</div>
+			<div class="form-group">
+				<label>Group</label>
+				<select ng-model="item.group">
+					<option value="protien">Protien</option>
+					<option value="fruit">Fruit</option>
+					<option value="vegetable">Vegetable</option>
+					<option value="grain">Grain</option>
+				</select>
+			</div>
+			<input type="submit" ng-click="subIng()" class="btn btn-primary">
+		</form>
+	</div>
+	<div>
+		<h2>Create Recipe</h2>
+		<form class="form-inline">
+			<div class="form-group">
+				<label>Name</label>
+				<input type="text" class="form-control" placeholder="name" ng-model="rec.name">
+			</div>
+			<div class="form-group">
+				<label>Description</label>
+				<input type="text" class="form-control" placeholder="description" ng-model="rec.desciption">
+			</div>
+			<div class="form-group">
+				<div ng-repeat="item in itemArray">
+				<p>{{item.name}}</p><input type="checkbox" value="item._id">
+				</div>
+			</div>
+			
+			<input type="submit" ng-click="subRec()" class="btn btn-primary">
+		</form>
+	</div>
+</body>
+	
+</html>
